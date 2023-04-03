@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'DentalReferral'`, () => {
+  it(`should have as title 'Oefinger Dental Referral'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('DentalReferral');
+    expect(app.title).toEqual('Oefinger Dental Referral');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('DentalReferral app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('Oefinger Dental Referral app is running!');
   });
 });
