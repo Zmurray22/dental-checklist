@@ -58,9 +58,10 @@ p {
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin: 70px auto 32px;
   padding: 0 16px;
-  max-width: inherit;
+  max-width: 100vw;
+  max-height: 10vh;
   flex-direction: column;
   align-items: center;
 }
@@ -79,10 +80,10 @@ svg.material-icons:not(:last-child) {
 }
 
 .card-container {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 16px;
 }
 
 .card {
@@ -289,4 +290,9 @@ svg#clouds {
     display: none;
     visibility: hidden;
   }
+}
+
+.navigation-group {
+  width: 95vw;
+  height: 80vh;
 }

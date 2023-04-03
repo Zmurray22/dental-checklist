@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {REFERRAL_FORM} from "../../assets/constants";
 
 @Component({
   selector: 'app-new-referral',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class NewReferralComponent {
 
+  protected readonly REFERRAL_FORM = REFERRAL_FORM;
 }
