@@ -5,13 +5,24 @@ export class Address {
   private _city: string;
   private _state: string;
   private _zipCode: string;
+  private _fullAddress: string;
 
-  constructor(street: string, street2: string, city: string, state: string, zipCode: string) {
+
+  constructor(street: string, street2: string, city: string, state: string, zipCode: string, fullAddress: string) {
     this._street = street;
     this._street2 = street2;
     this._city = city;
     this._state = state;
     this._zipCode = zipCode;
+    this._fullAddress = fullAddress;
+  }
+
+  get fullAddress(): string {
+    return this._fullAddress;
+  }
+
+  set fullAddress(value: string) {
+    this._fullAddress = value;
   }
 
   get street(): string {
