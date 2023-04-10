@@ -1,5 +1,5 @@
-import {Component, NgModule, OnInit} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {REFERRAL_FORM, US_STATES} from "../../assets/constants";
 import {map, Observable, startWith} from "rxjs";
 
@@ -15,17 +15,6 @@ export class NewReferralComponent implements OnInit{
     email: new FormControl('', [Validators.email]),
     state: new FormControl('', [Validators.maxLength(2)]),
   });
-  homeOfficeDrs: string[] = [
-    "Dr. Oefinger",
-    "Dr. Clark"
-  ];
-
-  referredDrs: string[] = [
-    "Dr. Billy Joel",
-    "Dr. Joe Buck",
-    "Dr. Bob Willis",
-    "Dr. Frank Senatra"
-  ]
 
   constructor() {
 

@@ -16,13 +16,21 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from "ngx-mask";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import { NewReferralDetailsComponent } from './new-referral/new-referral-details/new-referral-details.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { NewPatientDetailsComponent } from './new-referral/new-patient-details/new-patient-details.component';
+import { NewOfficeDetailsComponent } from './new-referral/new-office-details/new-office-details.component';
+import {MatStepperModule} from "@angular/material/stepper";
 
 @NgModule({
   declarations: [
     AppComponent,
     NewReferralComponent,
     ActiveReferralsComponent,
-    UpdatesComponent
+    UpdatesComponent,
+    NewReferralDetailsComponent,
+    NewPatientDetailsComponent,
+    NewOfficeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,9 @@ import {MatButtonModule} from "@angular/material/button";
     NgxMaskDirective,
     NgxMaskPipe,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule,
+    MatStepperModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]

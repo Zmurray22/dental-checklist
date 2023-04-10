@@ -1,3 +1,9 @@
+.teeth-graph {
+  border: 2px solid black;
+  height: 10em;
+  width: 100%;
+}
+
 .new-ref-card {
   width: 98%;
   height: 100%;
@@ -31,4 +37,21 @@ mat-card-title {
 
 .longer-input {
   width: 50em;
+}
+
+.submit-button {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  width: 50%;
+}
+
+mat-checkbox {
+  margin-left: 15px;
 }
