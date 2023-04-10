@@ -1,8 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {REFERRAL_FORM, US_STATES} from "../../assets/constants";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {map, startWith} from "rxjs/operators";
-import {Observable} from "rxjs";
+import {map, Observable, startWith} from "rxjs";
 
 @Component({
   selector: 'app-new-referral',
@@ -12,33 +11,31 @@ import {Observable} from "rxjs";
 export class NewReferralComponent implements OnInit{
 
   protected readonly REFERRAL_FORM = REFERRAL_FORM;
-  newRefForm: FormGroup;
+  newRefForm: FormGroup = new FormGroup({
+    email: new FormControl('', [Validators.email]),
+    state: new FormControl('', [Validators.maxLength(2)]),
+  });
   homeOfficeDrs: string[] = [
-    "Oefinger",
-    "Clark"
+    "Dr. Oefinger",
+    "Dr. Clark"
   ];
 
   referredDrs: string[] = [
-    "Billy",
-    "Joe",
-    "Bob",
-    "Frank"
+    "Dr. Billy Joel",
+    "Dr. Joe Buck",
+    "Dr. Bob Willis",
+    "Dr. Frank Senatra"
   ]
 
   constructor() {
-    this.newRefForm = new FormGroup({
-      email: new FormControl('email', [Validators.required, Validators.email]),
-      state: new FormControl('', [Validators.required, Validators.email]),
 
-    });
   }
 
   filteredOptions: Observable<string[]> = new Observable<string[]>();
 
   ngOnInit() {
 
-
-    this.filteredOptions = this.newRefForm.controls.valueChanges.pipe(
+    this.filteredOptions = this.newRefForm.get('state')!.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || '')),
     );
@@ -56,5 +53,9 @@ export class NewReferralComponent implements OnInit{
     }
 
     return this.newRefForm.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  clearField(field: string): void {
+    this.newRefForm.get(field)?.setValue('');
   }
 }
