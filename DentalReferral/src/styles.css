@@ -12,6 +12,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: flex-start;
 }
 
+.header-sections {
+  background-color: #1976d2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.header-titles {
+  font-size: 32px;
+  font-family: Helvetica, serif;
+  color: #ffffff;
+}
+
 mat-tab {
   height: 100%;
 }

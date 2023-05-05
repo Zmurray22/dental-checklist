@@ -22,6 +22,8 @@ import { NewPatientDetailsComponent } from './components/new-referral/new-patien
 import { NewOfficeDetailsComponent } from './components/new-referral/new-office-details/new-office-details.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import { AdminComponent } from './components/admin/admin.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { AdminComponent } from './components/admin/admin.component';
     MatIconModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatStepperModule
+    MatStepperModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]

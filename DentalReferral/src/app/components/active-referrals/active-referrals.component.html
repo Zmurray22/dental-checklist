@@ -1,4 +1,76 @@
 <div class="view-container">
-  <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam, aut consectetur doloremque dolores eligendi eos et illum, iure iusto laudantium modi neque quaerat recusandae saepe sapiente similique, vel velit. Aliquid consectetur consequatur culpa cum deleniti deserunt dignissimos dolorem eius et expedita fuga illum laborum minus nobis odit, officia officiis perferendis possimus quaerat quo sequi totam ut veniam vitae voluptate, voluptatem voluptatum! Labore odio reiciendis suscipit tempore! Ipsum, itaque, sit. Dignissimos eaque eius iure molestias provident quos ratione? Accusantium aliquid aperiam asperiores aspernatur blanditiis culpa doloribus eligendi illum nostrum porro quae qui quidem, repudiandae tempore vero. Animi, assumenda beatae doloremque eligendi eos laborum magni quam quo, sunt tempora tempore tenetur ullam unde! Aut consequatur cumque delectus dolore eaque enim, esse et hic in ipsam iusto maxime nam natus odit optio perspiciatis quaerat quod, recusandae rem reprehenderit similique sit totam unde! Animi cumque cupiditate delectus doloremque, fugit in maiores modi nesciunt nobis perferendis quasi quisquam repellendus reprehenderit tempore ut! Animi beatae cumque dolore expedita facere hic illo iste nulla officia quos sequi tenetur ut, veniam voluptas voluptatum. Beatae corporis culpa dolorem non quos reprehenderit veniam. Aliquid amet architecto, cumque dolore dolores error ex facere illum, nemo numquam perferendis quae repudiandae veritatis!</span>
+  <mat-card>
+    <mat-card-header class="header-sections">
+      <mat-card-title class="header-titles">Search</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content-container">
+      <div>
+        <!--      Name-->
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>DOB</mat-label>
+          <input type="date"
+                 matInput>
+        </mat-form-field>
+        <!--      Phone-->
+        <mat-form-field appearance="fill">
+          <mat-label>Phone Number</mat-label>
+          <input type="text"
+                 mask="(000) 000-0000"
+                 matInput>
+        </mat-form-field>
+        <!--      Home Doc-->
+        <mat-form-field appearance="fill">
+          <mat-label>Referring Doctor</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let name of HOME_OFFICE_DR" [value]="name">{{name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!--      Referred Doc-->
+        <mat-form-field appearance="fill">
+          <mat-label>Referred Doctor</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let name of REFERRED_DR" [value]="name">{{name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="patientFirstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> First </th>
+          <td mat-cell *matCellDef="let element"> {{element.patientFirstName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="patientLastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Last </th>
+          <td mat-cell *matCellDef="let element"> {{element.patientLastName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="DOB">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB </th>
+          <td mat-cell *matCellDef="let element"> {{element.DOB}} </td>
+        </ng-container>
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+        <ng-container matColumnDef="referringDoc">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Referring Doctor </th>
+          <td mat-cell *matCellDef="let element"> {{element.referringDoc}} </td>
+        </ng-container>
+        <ng-container matColumnDef="referredDoc">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Referred Doctor </th>
+          <td mat-cell *matCellDef="let element"> {{element.referredDoc}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
 </div>
 
