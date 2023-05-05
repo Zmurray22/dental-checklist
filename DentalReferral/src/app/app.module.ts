@@ -3,10 +3,10 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NewReferralComponent} from './new-referral/new-referral.component';
+import {NewReferralComponent} from './components/new-referral/new-referral.component';
 import {MatTabsModule} from "@angular/material/tabs";
-import {ActiveReferralsComponent} from './active-referrals/active-referrals.component';
-import {UpdatesComponent} from './updates/updates.component';
+import {ActiveReferralsComponent} from './components/active-referrals/active-referrals.component';
+import {UpdatesComponent} from './components/updates/updates.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
@@ -16,11 +16,12 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from "ngx-mask";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-import { NewReferralDetailsComponent } from './new-referral/new-referral-details/new-referral-details.component';
+import { NewReferralDetailsComponent } from './components/new-referral/new-referral-details/new-referral-details.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import { NewPatientDetailsComponent } from './new-referral/new-patient-details/new-patient-details.component';
-import { NewOfficeDetailsComponent } from './new-referral/new-office-details/new-office-details.component';
+import { NewPatientDetailsComponent } from './components/new-referral/new-patient-details/new-patient-details.component';
+import { NewOfficeDetailsComponent } from './components/new-referral/new-office-details/new-office-details.component';
 import {MatStepperModule} from "@angular/material/stepper";
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatStepperModule} from "@angular/material/stepper";
     UpdatesComponent,
     NewReferralDetailsComponent,
     NewPatientDetailsComponent,
-    NewOfficeDetailsComponent
+    NewOfficeDetailsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

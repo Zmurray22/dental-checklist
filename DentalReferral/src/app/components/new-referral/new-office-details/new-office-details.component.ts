@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {HOME_OFFICE_DR, REFERRED_DR} from "../../../assets/constants";
+import {Component} from '@angular/core';
+import {HOME_OFFICE_DR, REFERRED_DR} from "../../../../assets/constants";
 
 @Component({
   selector: 'app-new-office-details',

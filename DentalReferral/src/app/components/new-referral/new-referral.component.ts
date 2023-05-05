@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {REFERRAL_FORM, US_STATES} from "../../assets/constants";
+import {REFERRAL_FORM, US_STATES} from "../../../assets/constants";
 import {map, Observable, startWith} from "rxjs";
 
 @Component({
