@@ -1,20 +1,26 @@
 <div class="view-container">
-  <mat-card-title class="page-title mb-3">Updates</mat-card-title>
-  <mat-accordion>
-    <mat-expansion-panel hideToggle *ngFor="let item of updateList">
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          {{item}}
-        </mat-panel-title>
-        <mat-panel-description>
-          Status Message
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>Details of update:<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita id inventore
-        modi provident, reiciendis rem suscipit tempora tenetur vel! Aliquam architecto autem ducimus earum eius enim
-        explicabo fuga fugit harum, illum impedit itaque iusto libero maxime minus molestias numquam odit quaerat quam
-        quas rem, repellendus, sunt tempora tempore unde?</p>
-    </mat-expansion-panel>
-  </mat-accordion>
-
+  <mat-card-title class="page-title">Updates</mat-card-title>
+  <mat-card>
+    <div class="list-container">
+      <mat-accordion>
+        <mat-expansion-panel hideToggle *ngFor="let item of updateList">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{item}}
+            </mat-panel-title>
+            <mat-panel-description>
+              Status Message
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Details of update:<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias expedita id
+            inventore
+            modi provident, reiciendis rem suscipit tempora tenetur vel! Aliquam architecto autem ducimus earum eius
+            enim
+            explicabo fuga fugit harum, illum impedit itaque iusto libero maxime minus molestias numquam odit quaerat
+            quam
+            quas rem, repellendus, sunt tempora tempore unde?</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </mat-card>
 </div>

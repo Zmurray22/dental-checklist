@@ -9,7 +9,8 @@ import {REFERRAL_FORM} from "../../../assets/constants";
 export class UpdatesComponent implements AfterViewInit{
 
     protected readonly REFERRAL_FORM = REFERRAL_FORM;
-  updateList: string[] = ["Bob", "Jay", "Zach", "Valerie", "Aiven", "Asher", "Jesse"];
+  updateList: string[] = ["Bob", "Jay", "Zach", "Valerie", "Aiven", "Asher", "Jesse", "Tony", "Junior", "Bob", "Jay",
+    "Zach", "Valerie", "Aiven", "Asher", "Jesse", "Tony", "Junior"];
 
   ngAfterViewInit() {
   }
