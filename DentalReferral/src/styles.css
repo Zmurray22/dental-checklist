@@ -12,6 +12,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: flex-start;
 }
 
+.page-title {
+  margin: 10px;
+  font-size: 28px;
+}
+
 .header-sections {
   background-color: #1976d2;
   border-top-left-radius: 5px;

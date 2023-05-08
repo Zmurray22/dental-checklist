@@ -20,11 +20,6 @@ mat-card-content {
   justify-content: center;
 }
 
-mat-card-title {
-  margin: 10px;
-  font-size: 28px;
-}
-
 .long-input {
   width: 20em;
 }
