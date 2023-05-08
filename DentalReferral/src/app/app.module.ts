@@ -24,6 +24,7 @@ import {MatStepperModule} from "@angular/material/stepper";
 import { AdminComponent } from './components/admin/admin.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -36,25 +37,26 @@ import {MatSortModule} from "@angular/material/sort";
     NewOfficeDetailsComponent,
     AdminComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatTabsModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatAutocompleteModule,
-    ReactiveFormsModule,
-    NgxMaskDirective,
-    NgxMaskPipe,
-    MatIconModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatStepperModule,
-    MatTableModule,
-    MatSortModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatTabsModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatInputModule,
+        MatAutocompleteModule,
+        ReactiveFormsModule,
+        NgxMaskDirective,
+        NgxMaskPipe,
+        MatIconModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatStepperModule,
+        MatTableModule,
+        MatSortModule,
+        MatExpansionModule
+    ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
