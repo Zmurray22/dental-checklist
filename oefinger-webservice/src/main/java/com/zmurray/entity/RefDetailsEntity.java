@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "referral_details", schema = "oefinger_dental")
-public class RefDetailsEntity extends PanacheEntity {
+public class RefDetailsEntity {
     @Id
     @Column(name = "detail_id")
     private long detailId;

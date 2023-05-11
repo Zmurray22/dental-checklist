@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "patients", schema = "oefinger_dental")
-public class PatientEntity extends PanacheEntity {
+public class PatientEntity {
     @Id
     @Column(name = "patient_id")
     private long patientId;

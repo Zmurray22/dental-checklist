@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "office", schema = "oefinger_dental")
-public class OfficeEntity extends PanacheEntity {
+public class OfficeEntity {
     @Id
     @Column(name = "office_id")
     private long officeId;
