@@ -1,17 +1,20 @@
 <div class="view-container">
   <mat-card-title class="page-title">{{REFERRAL_FORM}}</mat-card-title>
   <mat-stepper orientation="vertical" [linear]="false" #stepper>
-    <mat-step [stepControl]="newRefForm">
+    <mat-step>
       <ng-template matStepLabel>Office Details</ng-template>
       <app-new-office-details></app-new-office-details>
     </mat-step>
-    <mat-step [stepControl]="newRefForm">
+    <mat-step>
       <ng-template matStepLabel>Patient Details</ng-template>
       <app-new-patient-details></app-new-patient-details>
     </mat-step>
-    <mat-step [stepControl]="newRefForm">
+    <mat-step>
       <ng-template matStepLabel>Referral Details</ng-template>
       <app-new-referral-details></app-new-referral-details>
     </mat-step>
   </mat-stepper>
+  <div class="submit-button">
+    <button mat-raised-button (click)="submitForm()" color="primary">Submit</button>
+  </div>
 </div>

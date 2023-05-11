@@ -1,24 +1,22 @@
 <mat-card class="new-ref-card">
   <mat-card-content class="inputs-container">
-    <div class="referral-details">
-      <!--        Referral Details-->
-      <mat-form-field appearance="fill" class="longer-input">
-        <mat-label>Reason</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="longer-input">
-        <mat-label>Reason Details</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="longer-input">
-        <mat-label>History Details</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-      <mat-checkbox>Existing Appointment</mat-checkbox>
-      <mat-checkbox>Call doctor before treatment</mat-checkbox>
-    </div>
-    <div class="submit-button">
-      <button mat-raised-button color="primary">Submit</button>
-    </div>
+    <form [formGroup]="detailsForm">
+      <div class="referral-details">
+        <mat-form-field appearance="fill" class="longer-input">
+          <mat-label>Reason</mat-label>
+          <input formControlName="reason" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="longer-input">
+          <mat-label>Reason Details</mat-label>
+          <textarea formControlName="details" matInput></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="longer-input">
+          <mat-label>History Details</mat-label>
+          <textarea formControlName="history" matInput></textarea>
+        </mat-form-field>
+        <mat-checkbox formControlName="existingApt">Existing Appointment</mat-checkbox>
+        <mat-checkbox formControlName="callBefore">Call doctor before treatment</mat-checkbox>
+      </div>
+    </form>
   </mat-card-content>
 </mat-card>

@@ -4,20 +4,20 @@ export class Patient {
 
   private _firstName: string;
   private _lastName: string;
-  private _birthday: string;
+  private _dob: Date;
   private _phoneNumber: string;
   private _email: string;
   private _address: Address;
   private _guardian: string;
 
-  constructor(firstName: string, lastName: string, birthday: string, phoneNumber: string, email: string, address: Address, guardian: string) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._birthday = birthday;
-    this._phoneNumber = phoneNumber;
-    this._email = email;
-    this._address = address;
-    this._guardian = guardian;
+  constructor(firstName?: string, lastName?: string, birthday?: Date, phoneNumber?: string, email?: string, address?: Address, guardian?: string) {
+    this._firstName = firstName ? firstName : "";
+    this._lastName = lastName ? lastName : "";
+    this._dob = birthday ? birthday : new Date("00-00-00");
+    this._phoneNumber = phoneNumber ? phoneNumber : "";
+    this._email = email ? email : "";
+    this._address = address ? address : new Address();
+    this._guardian = guardian ? guardian : "";
   }
 
   get firstName(): string {
@@ -36,12 +36,12 @@ export class Patient {
     this._lastName = value;
   }
 
-  get birthday(): string {
-    return this._birthday;
+  get dob(): Date {
+    return this._dob;
   }
 
-  set birthday(value: string) {
-    this._birthday = value;
+  set dob(value: Date) {
+    this._dob = value;
   }
 
   get phoneNumber(): string {

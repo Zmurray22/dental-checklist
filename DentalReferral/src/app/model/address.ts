@@ -1,20 +1,19 @@
 export class Address {
 
   private _street: string;
-  private _street2: string;
+  private _streetOpt: string;
   private _city: string;
   private _state: string;
   private _zipCode: string;
   private _fullAddress: string;
 
-
-  constructor(street: string, street2: string, city: string, state: string, zipCode: string, fullAddress: string) {
-    this._street = street;
-    this._street2 = street2;
-    this._city = city;
-    this._state = state;
-    this._zipCode = zipCode;
-    this._fullAddress = fullAddress;
+  constructor(street?: string, streetOpt?: string, city?: string, state?: string, zipCode?: string, fullAddress?: string) {
+    this._street = street ? street : "";
+    this._streetOpt = streetOpt ? streetOpt : "";
+    this._city = city ? city : "";
+    this._state = state ? state : "";
+    this._zipCode = zipCode ? zipCode : "";
+    this._fullAddress = fullAddress ? fullAddress : "";
   }
 
   get fullAddress(): string {
@@ -33,12 +32,12 @@ export class Address {
     this._street = value;
   }
 
-  get street2(): string {
-    return this._street2;
+  get streetOpt(): string {
+    return this._streetOpt;
   }
 
-  set street2(value: string) {
-    this._street2 = value;
+  set streetOpt(value: string) {
+    this._streetOpt = value;
   }
 
   get city(): string {
@@ -67,7 +66,7 @@ export class Address {
 
   public toString(): string {
     let completeAddress: string = this.street + "\n";
-    completeAddress += this.street2.length >1 ? this.street2 + "\n" : "";
+    completeAddress += this.streetOpt.length >1 ? this.streetOpt + "\n" : "";
     completeAddress += this.city + ", " + this.state + "\n" + this.zipCode;
 
     return completeAddress;

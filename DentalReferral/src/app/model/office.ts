@@ -2,20 +2,20 @@ import {Address} from "./address";
 
 export class Office {
 
+  private _drName: string;
   private _location: string;
   private _phoneNumber: string;
   private _fax: string;
   private _address: Address;
   private _email: string;
-  private _drName: string;
 
-  constructor(location: string, phoneNumber: string, fax: string, address: Address, email: string, drName: string) {
-    this._location = location;
-    this._phoneNumber = phoneNumber;
-    this._fax = fax;
-    this._address = address;
-    this._email = email;
-    this._drName = drName;
+  constructor(drName?: string, location?: string, phoneNumber?: string, fax?: string, address?: Address, email?: string) {
+    this._location = location ? location : "";
+    this._drName = drName ? drName : "";
+    this._phoneNumber = phoneNumber ? phoneNumber : "";
+    this._fax = fax ? fax : "";
+    this._address = address ? address : new Address();
+    this._email = email ? email : "";
   }
 
   get location(): string {

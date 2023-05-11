@@ -1,26 +1,25 @@
   <mat-card class="new-ref-card">
     <mat-card-content class="inputs-container">
-        <!--      Office Location-->
+      <form [formGroup]="officeForm">
         <mat-form-field appearance="fill">
           <mat-label>Office Location</mat-label>
-          <mat-select>
+          <mat-select formControlName="officeLocation">
             <mat-option value="military">NW Military</mat-option>
             <mat-option value="thousandOaks">Thousand Oaks</mat-option>
           </mat-select>
         </mat-form-field>
-        <!--      Home Doc-->
         <mat-form-field appearance="fill">
           <mat-label>Referring Doctor</mat-label>
-          <mat-select>
+          <mat-select formControlName="primaryDoctor">
             <mat-option *ngFor="let name of HOME_OFFICE_DR" [value]="name">{{name}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <!--      Referred Doc-->
         <mat-form-field appearance="fill">
           <mat-label>Referred Doctor</mat-label>
-          <mat-select>
+          <mat-select formControlName="referredDoctor">
             <mat-option *ngFor="let name of REFERRED_DR" [value]="name">{{name}}</mat-option>
           </mat-select>
         </mat-form-field>
+      </form>
     </mat-card-content>
   </mat-card>
